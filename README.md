@@ -1,4 +1,4 @@
-# REXT-PROXY
+# Rext-Proxy
 
 A C++17 multi-server proxy for **Terraria 1.4.5.8 (protocol 326)**. Players connect to one address and switch between lobby, survival and build servers using chat commands.
 
