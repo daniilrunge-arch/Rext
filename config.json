@@ -1,0 +1,67 @@
+{
+  "listenPort": 7777,
+  "terrariaVersion": "Terraria326",
+  "maxPlayers": 100,
+  "connectTimeoutSec": 6,
+  "logDirectory": "logs",
+  "packetLogging": false,
+  "logMaxMB": 8,
+  "packetLogMaxMB": 16,
+  "logBackups": 5,
+  "packetHexBytes": 48,
+  "servers": [
+    {
+      "name": "lobby",
+      "host": "127.0.0.1",
+      "port": 7778
+    },
+    {
+      "name": "survival",
+      "host": "127.0.0.1",
+      "port": 7779
+    },
+    {
+      "name": "build",
+      "host": "127.0.0.1",
+      "port": 7780
+    }
+  ],
+  "serverOfflineMessage": "This dimension is unavailable. Please try again later.",
+  "kickMessage": "Connection to your dimension was lost.",
+  "dimensionDroppedMessage": "Connection to your dimension was lost.",
+  "kickbackMessage": "Connection to the dimension was lost. Returning to lobby...",
+  "switchMessage": "[i:4076][c/d62ef0:Dimensions] [c/8efad2:Shifting to dimension] {server}...",
+  "loadingStatusMessage": "",
+  "restPort": 9999,
+  "restName": "REXT Network",
+  "restWorld": "Lobby / Survival / Build",
+  "restMaxPlayers": 100,
+  "restVersion": "v1.4.5.8",
+  "warps": [],
+  "requireWarpRule": false,
+  "requireJoinRule": false,
+  "debuffOnSwitch": true,
+  "debuffIds": [
+    163,
+    47,
+    149
+  ],
+  "debuffSeconds": 5,
+  "antiNickEnabled": true,
+  "minNickLength": 2,
+  "maxNickLength": 20,
+  "reservedNicknames": [
+    "admin",
+    "administrator",
+    "moderator",
+    "mod",
+    "owner",
+    "console",
+    "server",
+    "rextproxy"
+  ],
+  "antiSpamEnabled": true,
+  "maxChatMessagesPer10Seconds": 8,
+  "duplicateChatCooldownMs": 1500,
+  "enforceMaxPlayers": true
+}

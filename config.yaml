@@ -1,0 +1,98 @@
+# English configuration for REXT-PROXY / Terraria 1.4.5.8 (326).
+# Replace backend addresses and ports before use.
+# Start: dimensions.exe config.yaml (Windows) or ./dimensions config.yaml (Linux).
+servers:
+  - listenPort: 7777
+    routingServers:
+      - name: lobby
+        serverIP: "127.0.0.1"
+        serverPort: 7778
+        hidden: false
+        isVanilla: false
+
+  - routingServers:
+      - name: survival
+        serverIP: "127.0.0.1"
+        serverPort: 7779
+        hidden: false
+        isVanilla: false
+      - name: build
+        serverIP: "127.0.0.1"
+        serverPort: 7780
+        hidden: false
+        isVanilla: false
+
+options:
+  language: "english"
+  rext:
+    packetLogging: false
+    antiSpamEnabled: true
+    connectTimeoutSeconds: 3
+  socketTimeout: 15000
+  socketNoDelay: true
+  restApi:
+    enabled: false
+    port: 9999
+    response:
+      name: "REXT Network"
+      worldName: "Lobby / Survival / Build"
+      terrariaServerPort: 7777
+      hasServerPassword: false
+      maxPlayers: 100
+      version: "1.4.5.8"
+  tcpRtt:
+    enabled: true
+    sampleIntervalMs: 2000
+    greenMaxMs: 80
+    yellowMaxMs: 150
+    exportToServers: true
+    restApiEndpoint: false
+    pingCommandPassThrough: false
+  blockInvis: false
+  connectionLimit:
+    enabled: true
+    connectionLimitPerIP: 4
+    kickReason: "Too many connections from one IP address."
+  connectionRateLimit:
+    enabled: true
+    connectionRateLimitPerIP: 5
+    connectionRateLimitWindowSeconds: 10
+  nameChanges:
+    mode: "rewrite"
+    exclusions: []
+  log:
+    outputToConsole: true
+    outputToFile: true
+    format:
+      console: "PlainText"
+      file: "PlainText"
+  debuffOnSwitch:
+    enabled: true
+    buffTypes: [163, 47, 149]
+    debuffTimeInSeconds: 5
+  disconnectOnKick:
+    type: "never"
+  # Editable English messages. Preserve ${name}, ${total}, ${overallRtt} and chat tags.
+  languageOverrides:
+    areYouEvenConnected: "[i:4076][c/d62ef0:Dimensions] Are you connected?"
+    availableDimensions: "[i:4076][c/d62ef0:Dimensions] [c/f88efa:Available dimensions:]"
+    blacklistCheckError: "Blacklist check failed."
+    blacklisted: "You are blacklisted."
+    characterNameLengthOutOfRange: "Character name must contain 2 to 20 characters."
+    close: "Server restarting. Please reconnect."
+    connectionRateLimitExceeded: "Too many connections. Please wait."
+    currentTcpRtt: "[i:4076][c/d62ef0:Dimensions] Your network ping: ${overallRtt}"
+    dimensionDisconnectedYou: "[i:4076][c/d62ef0:Dimensions] disconnected you."
+    dimensionDropped: "Connection to your dimension was lost."
+    dimensionsCommandName: "dim"
+    invalidPacketLength: "Invalid client packet length."
+    nameAlreadyOnServer: "Player ${name} is already on the server."
+    noServersAvailable: "Servers are unavailable. Please try again later."
+    playerCount: "[i:4076][c/d62ef0:Dimensions] [c/f88efa:${total} players online.]"
+    reason: " "
+    shiftingToDimension: "[i:4076][c/d62ef0:Dimensions] [c/8efad2:Shifting to dimension] ${name}..."
+    specifyADimensionToTravel: "Specify a dimension to travel to:"
+    tcpRttUnavailable: "[i:4076][c/d62ef0:Dimensions] [c/ff3333:Error:] TCP RTT is unavailable."
+    youAreAlreadyInthatDimension: "[i:4076][c/d62ef0:Dimensions] [c/f88efa:You are already in this dimension.]"
+    youEnteredTheVoid: "[i:4076][c/d62ef0:Dimensions] [c/f88efa:You entered the Void. You will disappear soon.]"
+    youNeedToWaitUntilConnected: "[i:4076][c/d62ef0:Dimensions] Please wait for the current connection to complete."
